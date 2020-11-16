@@ -53,32 +53,6 @@
             "locale": "zh-Hans"
           }
         }
-      },
-      "RoomChatsClient/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/RoomChatsClient.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RoomChatsClient.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
-      },
-      "RoomChatsServer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/RoomChatsServer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/RoomChatsServer.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.WindowsDesktop.App.WPF"
-        ]
       }
     }
   },
@@ -112,23 +86,11 @@
         "lib/net40/zh-Hans/Xceed.Wpf.AvalonDock.resources.dll",
         "tools/install.ps1"
       ]
-    },
-    "RoomChatsClient/1.0.0": {
-      "type": "project",
-      "path": "../RoomChatsClient/RoomChatsClient.csproj",
-      "msbuildProject": "../RoomChatsClient/RoomChatsClient.csproj"
-    },
-    "RoomChatsServer/1.0.0": {
-      "type": "project",
-      "path": "../RoomChatsServer/RoomChatsServer.csproj",
-      "msbuildProject": "../RoomChatsServer/RoomChatsServer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Extended.Wpf.Toolkit >= 4.0.1",
-      "RoomChatsClient >= 1.0.0",
-      "RoomChatsServer >= 1.0.0"
+      "Extended.Wpf.Toolkit >= 4.0.1"
     ]
   },
   "packageFolders": {
@@ -160,14 +122,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {
-            "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\RoomChatsClient.csproj": {
-              "projectPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\RoomChatsClient.csproj"
-            },
-            "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsServer\\RoomChatsServer.csproj": {
-              "projectPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsServer\\RoomChatsServer.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -197,9 +152,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WPF": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"

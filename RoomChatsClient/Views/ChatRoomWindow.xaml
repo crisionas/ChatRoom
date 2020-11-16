@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoomChatsClient.Views"
         mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
         Title="ChatRoomWindow" Height="157" Width="300">
     <Grid>
-        <TextBox Text="TextBox" TextWrapping="Wrap" Height="Auto" Margin="60,60,60,60"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,44,0,0" Text="Chatroom name" TextWrapping="Wrap" VerticalAlignment="Top"/>
-        <Button Content="Create a chatroom" Height="Auto" Width="Auto" Margin="80,100,80,20"/>
+        <TextBox Name="chatroomTextBox" TextWrapping="Wrap"  Margin="60,60,60,53" TextChanged="chatroomTextBox_TextChanged" />
+        <TextBlock HorizontalAlignment="Center" Margin="0,44,0,0" Text="Chatroom name" TextWrapping="Wrap" VerticalAlignment="Top" />
+        <Button  Name="createChatroomButton" Content="Create a chatroom"   Margin="80,100,87,10" Click="createChatroomButton_Click"/>
 
     </Grid>
 </Window>

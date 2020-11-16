@@ -8,9 +8,4 @@
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\RoomChatsClient\RoomChatsClient.csproj" />
-    <ProjectReference Include="..\RoomChatsServer\RoomChatsServer.csproj" />
-  </ItemGroup>
-
 </Project>

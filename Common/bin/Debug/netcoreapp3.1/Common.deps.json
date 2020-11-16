@@ -8,9 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "Common/1.0.0": {
         "dependencies": {
-          "Extended.Wpf.Toolkit": "4.0.1",
-          "RoomChatsClient": "1.0.0",
-          "RoomChatsServer": "1.0.0"
+          "Extended.Wpf.Toolkit": "4.0.1"
         },
         "runtime": {
           "Common.dll": {}
@@ -74,16 +72,6 @@
             "locale": "zh-Hans"
           }
         }
-      },
-      "RoomChatsClient/1.0.0": {
-        "runtime": {
-          "RoomChatsClient.dll": {}
-        }
-      },
-      "RoomChatsServer/1.0.0": {
-        "runtime": {
-          "RoomChatsServer.dll": {}
-        }
       }
     }
   },
@@ -99,16 +87,6 @@
       "sha512": "sha512-K8BoXvwokEJTiVkOH4L8FGeWaT0TptzgXJsFI/FlfPA1TSzhgNcrHJtxDFecAYwHNU3wnUjSGZ/YMq5gR5TGag==",
       "path": "extended.wpf.toolkit/4.0.1",
       "hashPath": "extended.wpf.toolkit.4.0.1.nupkg.sha512"
-    },
-    "RoomChatsClient/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "RoomChatsServer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

@@ -4,24 +4,23 @@ using System.Text;
 
 namespace Common.Implementation
 {
-    /// <summary>
-    /// Store a message
-    /// </summary>
+    [Serializable]
     public class Message
     {
-        public enum Header { REGISTER,JOIN,QUIT,JOIN_CR,QUIT_CR,CREATE_CR,LIST_CR,POST,LIST_USERS}
-        private Header header;
+        public enum Header { REGISTER, JOIN, QUIT, JOIN_CR, QUIT_CR, CREATE_CR, LIST_CR, POST, LIST_USERS }
+        private Header head;
         private List<string> messageList;
 
         public Header Head
         {
             get
             {
-                return header;
+                return head;
             }
+
             set
             {
-                header = value;
+                head = value;
             }
         }
 
@@ -31,27 +30,40 @@ namespace Common.Implementation
             {
                 return messageList;
             }
+
             set
             {
                 messageList = value;
             }
         }
 
-        public Message(Header head,string message)
+        public Message(Header head, string message)
         {
             this.Head = head;
-            MessageList = new List<string>();
-            MessageList.Add(message);
-
+            this.MessageList = new List<string>();
+            this.MessageList.Add(message);
         }
-        
+
+        public Message(Header head)
+        {
+            this.Head = head;
+            this.MessageList = new List<string>();
+        }
+
+        public Message(Header head, List<string> messages)
+        {
+            this.Head = head;
+            this.MessageList = new List<string>();
+            this.MessageList = messages;
+        }
+
         /// <summary>
-        /// Add message in the list.
+        /// Add data to the message list
         /// </summary>
         /// <param name="message"></param>
-          public void AddData(string message)
+        public void addData(string message)
         {
-            MessageList.Add(message);
+            this.MessageList.Add(message);
         }
     }
 }

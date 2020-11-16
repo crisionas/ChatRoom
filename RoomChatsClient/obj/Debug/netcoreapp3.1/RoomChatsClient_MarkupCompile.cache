@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\App.xaml
-336738809
+3-193524131
 
-5-84897653
-1921654412462
-Views\ChatRoomWindow.xaml;Views\ChatWindow.xaml;Views\ServerGUI.xaml;
+7-388921976
+1981477589463
+Views\AuthWindow.xaml;Views\ChatRoomWindow.xaml;Views\ChatWindow.xaml;
 
 False
 

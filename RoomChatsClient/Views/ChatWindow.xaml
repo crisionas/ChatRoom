@@ -4,19 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RoomChatsClient.Views"
+        SizeToContent="WidthAndHeight"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="ChatWindow" Height="450" Width="800">
     <Grid>
-        <ListBox Margin="20,20,630,16"/>
-        <ComboBox Height="Auto" Margin="185,20,150,390">
-            <ListBox/>
-        </ComboBox>
-        <ListBox HorizontalAlignment="Stretch" Height="Auto" Margin="185,60,20,55" VerticalAlignment="Stretch" Width="Auto">
-            <Button Content="Button"/>
-        </ListBox>
-        <TextBox Text="TextBox" TextWrapping="Wrap" Height="Auto" Margin="185,390,100,20"/>
-        <Button Content="Create chatroom" Height="Auto" Width="Auto" Margin="665,20,20,390"/>
-        <Button Content="Send" Height="Auto" Width="Auto" Margin="715,390,20,20"/>
+        <ListBox Name="userlist" Margin="20,32,630,16" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="userlist_SelectionChanged"/>
+        <ComboBox  Name="chatrooms" Margin="185,20,150,390" SelectionChanged="chatrooms_SelectionChanged"/>
+        <ListBox  x:Name="messages" ItemsSource="{Binding}" HorizontalAlignment="Stretch" Height="310"  Margin="185,60,20,55" VerticalAlignment="Stretch" Width="600" IsSynchronizedWithCurrentItem="True"/>
+        <TextBox Name="messageTextBox" TextWrapping="Wrap" Margin="185,390,100,16" TextChanged="messageTextBox_TextChanged"/>
+        <Button Name="createChatroomButton" Content="Create chatroom" Height="Auto" Width="Auto" Margin="665,20,20,390" Click="createChatroomButton_Click"/>
+        <Button Name="sendButton" Content="Send" Height="Auto" Width="Auto" Margin="715,390,20,16" Click="sendButton_Click"/>
+        <TextBlock Name="nickname" HorizontalAlignment="Left" Margin="20,11,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
 
     </Grid>
 </Window>

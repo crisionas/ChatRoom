@@ -1,0 +1,9 @@
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\bin\Debug\netcoreapp3.1\Chat.deps.json
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\bin\Debug\netcoreapp3.1\Chat.dll
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\bin\Debug\netcoreapp3.1\Chat.pdb
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Chat.csprojAssemblyReference.cache
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Chat.AssemblyInfoInputs.cache
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Chat.AssemblyInfo.cs
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Chat.csproj.CoreCompileInputs.cache
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Chat.dll
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Chat.pdb
