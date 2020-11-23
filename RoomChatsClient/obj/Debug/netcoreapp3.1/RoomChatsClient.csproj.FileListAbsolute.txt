@@ -40,3 +40,6 @@ D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\bin\Debug\netcoreapp3.
 D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\bin\Debug\netcoreapp3.1\Common.dll
 D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\bin\Debug\netcoreapp3.1\Common.pdb
 D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\obj\Debug\netcoreapp3.1\RoomChatsClient.csproj.CopyComplete
+D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsClient\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll

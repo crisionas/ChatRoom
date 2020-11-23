@@ -9,13 +9,12 @@
         ResizeMode="NoResize"
         Title="ChatWindow" Height="450" Width="800">
     <Grid>
-        <ListBox Name="userlist" Margin="20,32,630,16" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="userlist_SelectionChanged"/>
-        <ComboBox  Name="chatrooms" Margin="185,20,150,390" SelectionChanged="chatrooms_SelectionChanged"/>
+        <ListBox Name="userlist" Margin="20,20,630,16" ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" SelectionChanged="userlist_SelectionChanged"/>
+        <ComboBox Name="chatrooms" Margin="185,20,150,390" SelectionChanged="chatrooms_SelectionChanged" AutomationProperties.HelpText="default"/>
         <ListBox  x:Name="messages" ItemsSource="{Binding}" HorizontalAlignment="Stretch" Height="310"  Margin="185,60,20,55" VerticalAlignment="Stretch" Width="600" IsSynchronizedWithCurrentItem="True"/>
-        <TextBox Name="messageTextBox" TextWrapping="Wrap" Margin="185,390,100,16" TextChanged="messageTextBox_TextChanged"/>
+        <TextBox Name="messageTextBox" TextWrapping="Wrap" Margin="185,390,89,16" TextChanged="messageTextBox_TextChanged"/>
         <Button Name="createChatroomButton" Content="Create chatroom" Height="Auto" Width="Auto" Margin="665,20,20,390" Click="createChatroomButton_Click"/>
-        <Button Name="sendButton" Content="Send" Height="Auto" Width="Auto" Margin="715,390,20,16" Click="sendButton_Click"/>
-        <TextBlock Name="nickname" HorizontalAlignment="Left" Margin="20,11,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Button Name="sendButton" Content="Send" Height="Auto" Width="Auto" Margin="716,390,20,16" Click="sendButton_Click"/>
 
     </Grid>
 </Window>

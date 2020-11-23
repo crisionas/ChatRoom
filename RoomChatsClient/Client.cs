@@ -1,10 +1,12 @@
-﻿using Common.Auth;
+﻿using Common.Algorithms;
+using Common.Auth;
 using Common.Chat;
 using Common.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows.Controls;
@@ -330,8 +332,25 @@ namespace RoomChatsClient
 
                 case Message.Header.POST:
                     Console.WriteLine("- Message received: (" + message.MessageList[0] + ") " + message.MessageList[1]);
-                    messagesBindingList.Add(message.MessageList[1]);
+                    
+                    if (message.MessageList[1].Contains("joined the chatroom") || message.MessageList[1].Contains("left the chatroom"))
+                    {
+                        messagesBindingList.Add(message.MessageList[1]);
+                    }
+                    else
+                    {
+                        RSACryptoServiceProvider RSAKey = new RSACryptoServiceProvider();
+                        var message1 = new Message(Message.Header.POST);
+                        int length = message.MessageList[1].Length;
+                        string splitString = message.MessageList[1].Substring(message.MessageList[1].IndexOf(":")+1);
+                       string decrypted = DESAlg.Decrypt(splitString);
+
+                        message.MessageList[1] = message.MessageList[0]+": "+decrypted;
+                        messagesBindingList.Add(message.MessageList[1]);
+                    }
                     break;
+
+
             }
         }
     }

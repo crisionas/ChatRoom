@@ -1,8 +1,13 @@
-﻿using Common.Auth;
+﻿using Common.Algorithms;
+using Common.Auth;
 using Common.Chat;
 using Common.Implementation;
+using Common.Models;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows;
@@ -29,6 +34,7 @@ namespace RoomChatsClient.Views
         private ThreadedBindingList<User> usersBindingList;
         private ThreadedBindingList<string> messagesBindingList;
         private Chatroom defaultChatroom;
+       
 
         public ChatWindow(Client clientParam)
         {
@@ -40,7 +46,8 @@ namespace RoomChatsClient.Views
         private void sendButton_Click(object sender, RoutedEventArgs e)
         {
             Message messageToSend = new Message(Message.Header.POST);
-            messageToSend.addData(messageTextBox.Text);
+            string encryptMessage = DESAlg.Encrypt(messageTextBox.Text);
+            messageToSend.addData(encryptMessage);
             client.sendMessage(messageToSend);
             messageTextBox.Clear();
         }
@@ -67,7 +74,7 @@ namespace RoomChatsClient.Views
                 }
             }
             // Join the chatroom wanted otherwise
-            if (chatrooms.Text != "" &&
+            if (chatrooms.Text !="" &&
                 chatrooms.Text != "Select a chatroom" &&
                 chatrooms.SelectedItem != null)
             {
@@ -158,7 +165,6 @@ namespace RoomChatsClient.Views
 
         private void Load()
         {
-            nickname.Text = client.User.Login;
 
             chatroomsBindingList = new ThreadedBindingList<Chatroom>();
             client.ChatroomsBindingList = chatroomsBindingList;
@@ -198,5 +204,8 @@ namespace RoomChatsClient.Views
         {
 
         }
+
+      
+        
     }
 }

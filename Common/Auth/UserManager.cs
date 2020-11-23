@@ -1,4 +1,5 @@
-﻿using Common.Exceptions;
+﻿using Common.Algorithms;
+using Common.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -111,7 +112,6 @@ namespace Common.Auth
         public void authentify(string login, string password)
         {
             User userToAuthentify = null;
-
             foreach (User user in UserList.ToList())
             {
                 if (user.Login == login && user.Password == password)

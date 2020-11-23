@@ -1,9 +1,11 @@
-﻿using Common.Auth;
+﻿using Common.Algorithms;
+using Common.Auth;
 using Common.Chat;
 using Common.Exceptions;
 using Common.Implementation;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -105,6 +107,7 @@ namespace RoomChatsServer
                 {
                     Console.WriteLine("Waiting for a new connection...");
                     TcpClient client = this.tcpListener.AcceptTcpClient();
+
                     Session session = new Session();
                     session.Client = client;
                     SessionManager.addSession(session);
@@ -209,14 +212,12 @@ namespace RoomChatsServer
                 {
                     case Message.Header.QUIT:
                         {
-                            // Warn the user he has been disconnected
                             Message messageSuccess = new Message(Message.Header.QUIT);
                             messageSuccess.addData("success");
                             sendMessage(messageSuccess, session.Client.Client);
 
                             if (session.User.Chatroom != null)
                             {
-                                // Warn the other users that he left
                                 broadcastToChatRoom(session, "left the chatroom \"" + session.User.Chatroom.Name + "\"");
                             }
 
@@ -228,7 +229,6 @@ namespace RoomChatsServer
                         break;
 
                     case Message.Header.JOIN_CR:
-                        // Before joining a chatroom, let's leave the current one
                         quitCr(session, message);
 
                         try
@@ -239,20 +239,18 @@ namespace RoomChatsServer
                                 session.User.Chatroom = new Chatroom(messageList[0]);
                                 Console.WriteLine("- " + session.User.Login + " joined the chatroom: " + messageList[0]);
 
-                                // Tell the client the channel has been joined
                                 Message messageSuccess = new Message(Message.Header.JOIN_CR);
                                 messageSuccess.addData("success");
                                 messageSuccess.addData(messageList[0]);
                                 sendMessage(messageSuccess, session.Client.Client);
 
-                                //On broadcast à tous les participants de la conversations l'arrivée de l'utilisateur
+                                
                                 Message messagePostBroadcast = new Message(Message.Header.POST);
                                 broadcastToChatRoom(session, "joined the chatroom \"" + messageList[0] + "\"");
                             }
                         }
                         catch (ChatroomUnknownException e)
                         {
-                            // Tell the client the channel has not been joined
                             Message messageSuccess = new Message(Message.Header.JOIN_CR);
                             messageSuccess.addData("error");
                             messageSuccess.addData(message.MessageList[0]);
@@ -272,7 +270,6 @@ namespace RoomChatsServer
                             ChatroomManager.addChatroom(new Chatroom(messageList[0]));
                             ChatroomManager.save("chatrooms.db");
 
-                            // Tell the users the chatroom has been created
                             Message messageSuccess = new Message(Message.Header.CREATE_CR);
                             messageSuccess.addData("success");
                             messageSuccess.addData(messageList[0]);
@@ -282,7 +279,6 @@ namespace RoomChatsServer
                         }
                         catch (ChatroomAlreadyExistsException e)
                         {
-                            // Warn the user the chatroom has not been created
                             Message messageError = new Message(Message.Header.CREATE_CR);
                             messageError.addData("error");
                             messageError.addData("Chatroom " + e.Message + " already exists");
@@ -302,7 +298,7 @@ namespace RoomChatsServer
                         break;
 
                     case Message.Header.POST:
-                        Console.WriteLine("- " + session.User.Login + " : message received : " + message.MessageList[0]);
+                        Console.WriteLine("- " + session.User.Login + " message received : " + message.MessageList[0]);
                         broadcastToChatRoom(session, message.MessageList[0]);
                         break;
 
@@ -315,7 +311,6 @@ namespace RoomChatsServer
                         // For all users currently connected
                         foreach (Session localSession in SessionManager.SessionList.ToList())
                         {
-                            // If the user is in the chatroom we want the userlist
                             if (localSession.User != null &&
                                 localSession.User.Chatroom != null &&
                                 localSession.User.Chatroom.Name == chatroomWanted)
@@ -406,7 +401,6 @@ namespace RoomChatsServer
                             if (SessionManager.SessionList[i].User != null &&
                                 SessionManager.SessionList[i].User.Chatroom != null)
                             {
-                                // Tell the other users that he left
                                 broadcastToChatRoom(SessionManager.SessionList[i], "left the chatroom \"" +
                                     SessionManager.SessionList[i].User.Chatroom.Name + "\"");
                             }

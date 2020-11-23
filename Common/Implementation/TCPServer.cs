@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -50,8 +51,12 @@ namespace Common.Implementation
 
             try
             {
+
                 tcpListener = new TcpListener(ipAddress, port);
                 tcpListener.Start();
+
+                
+
                 this.Running = true;
             }
             catch (SocketException e)
@@ -132,5 +137,7 @@ namespace Common.Implementation
                 Console.WriteLine("TCPClient sendMessage exception: " + e.Message);
             }
         }
+    
+
     }
 }

@@ -2,8 +2,8 @@ D:\Visual Projects\UTM\SI\RoomChatsClient\Common\bin\Debug\netcoreapp3.1\Common.
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\bin\Debug\netcoreapp3.1\Common.dll
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
-D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\bin\Debug\netcoreapp3.1\Common.pdb
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.dll
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.pdb
+D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
 D:\Visual Projects\UTM\SI\RoomChatsClient\Common\obj\Debug\netcoreapp3.1\Common.csprojAssemblyReference.cache

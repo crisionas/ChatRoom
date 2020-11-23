@@ -40,6 +40,10 @@ namespace Common.Chat
         {
             this.Name = name;
         }
+        public Chatroom()
+        {
+                
+        }
 
         public int CompareTo(Chatroom other)
         {

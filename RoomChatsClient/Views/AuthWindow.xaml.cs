@@ -1,8 +1,10 @@
-﻿using Common.Auth;
+﻿using Common.Algorithms;
+using Common.Auth;
 using Common.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,7 +36,9 @@ namespace RoomChatsClient.Views
         {
             Message messageJoin = new Message(Message.Header.JOIN);
             messageJoin.addData(usernameTextBox.Text);
-            messageJoin.addData(passwordTextBox.Password);
+            string passwordEncrypt = AESAlg.EncryptData(passwordTextBox.Password, usernameTextBox.Text);
+
+            messageJoin.addData(passwordEncrypt);
             client.sendMessage(messageJoin);
 
             Message reply = client.getMessage();
@@ -66,7 +70,9 @@ namespace RoomChatsClient.Views
         {
             Message messageRegister = new Message(Message.Header.REGISTER);
             messageRegister.addData(usernameTextBox.Text);
-            messageRegister.addData(passwordTextBox.Password);
+            string passwordEncrypt = AESAlg.EncryptData(passwordTextBox.Password,usernameTextBox.Text);
+
+            messageRegister.addData(passwordEncrypt);
 
             if (usernameTextBox.Text == "" || passwordTextBox.Password == "")
             {

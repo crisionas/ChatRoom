@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
@@ -60,6 +61,8 @@ namespace Common.Implementation
             }
         }
 
+        public object ProgressValue { get; private set; }
+
         public TCPClient()
         {
             tcpClient = null;
@@ -101,6 +104,7 @@ namespace Common.Implementation
                 try
                 {
                     NetworkStream strm = tcpClient.GetStream();
+
                     IFormatter formatter = new BinaryFormatter();
                     Message message = (Message)formatter.Deserialize(strm);
                     Console.WriteLine("## TCPClient Receiving a message: " + message.Head);
@@ -159,5 +163,7 @@ namespace Common.Implementation
                 }
             }
         }
+
+      
     }
 }

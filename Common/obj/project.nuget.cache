@@ -1,10 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "cUk0n4efhBH9rXWPtK/DhFgclTEX4sqhoJrM4spTK2dsV8HD6zvrXGqzc4DPigE46lSZF+D8Xh4GZcFwWErCPQ==",
+  "dgSpecHash": "aYuPaLyC1oRA2lmvSCHymZtAyrQpIaARJyMn6mGq5yfwpW3dvlPJ0jr7vhGVop7gvkZUxxx8jLeTmwrBnnhVmw==",
   "success": true,
   "projectFilePath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Artyrik\\.nuget\\packages\\extended.wpf.toolkit\\4.0.1\\extended.wpf.toolkit.4.0.1.nupkg.sha512"
+    "C:\\Users\\Artyrik\\.nuget\\packages\\extended.wpf.toolkit\\4.0.1\\extended.wpf.toolkit.4.0.1.nupkg.sha512",
+    "C:\\Users\\Artyrik\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Artyrik\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Artyrik\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\Artyrik\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\Artyrik\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\Artyrik\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
   ],
   "logs": [
     {
