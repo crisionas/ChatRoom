@@ -76,7 +76,7 @@ namespace RoomChatsServer
                 chatroomManager = value;
             }
         }
-
+        public string connectionString;
         /// <summary>
         /// Running the server launches 3 threads:
         /// Check for the messages sent by users
@@ -87,7 +87,7 @@ namespace RoomChatsServer
         {
             checkDataThread = new Thread(new ThreadStart(this.checkData));
             checkDataThread.Start();
-
+            connectionString = DSAAlg.Hash(IP + port.ToString()); ;
             checkQuitThread = new Thread(new ThreadStart(this.checkQuit));
             checkQuitThread.Start();
 
@@ -363,6 +363,7 @@ namespace RoomChatsServer
 
                             Message messageSuccess = new Message(Message.Header.JOIN);
                             messageSuccess.addData("success");
+                            messageSuccess.addData(connectionString);
                             sendMessage(messageSuccess, session.Client.Client);
 
                             Console.WriteLine("- Login success : " + session.User.Login);

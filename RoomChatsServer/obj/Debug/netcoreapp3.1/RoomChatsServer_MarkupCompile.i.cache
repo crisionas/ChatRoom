@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsServer\obj\Debug\netcoreapp3.1\
+C:\Users\Artyrik\Desktop\SI\ChatRoom\RoomChatsServer\obj\Debug\netcoreapp3.1\
 RoomChatsServer
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Visual Projects\UTM\SI\RoomChatsClient\RoomChatsServer\App.xaml
+C:\Users\Artyrik\Desktop\SI\ChatRoom\RoomChatsServer\App.xaml
 11796046504
 
 7-1932109773
-2011848535939
+201317141280
 Views\ServerGUI.xaml;
 
-True
+False
 

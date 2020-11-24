@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\RoomChatsClient.csproj": {}
+    "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\RoomChatsClient\\RoomChatsClient.csproj": {}
   },
   "projects": {
-    "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\Common.csproj": {
+    "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\Common.csproj",
+        "projectUniqueName": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\Common.csproj",
+        "projectPath": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\Common\\Common.csproj",
         "packagesPath": "C:\\Users\\Artyrik\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\obj\\",
+        "outputPath": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\",
@@ -73,14 +73,14 @@
         }
       }
     },
-    "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\RoomChatsClient.csproj": {
+    "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\RoomChatsClient\\RoomChatsClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\RoomChatsClient.csproj",
+        "projectUniqueName": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\RoomChatsClient\\RoomChatsClient.csproj",
         "projectName": "RoomChatsClient",
-        "projectPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\RoomChatsClient.csproj",
+        "projectPath": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\RoomChatsClient\\RoomChatsClient.csproj",
         "packagesPath": "C:\\Users\\Artyrik\\.nuget\\packages\\",
-        "outputPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsClient\\obj\\",
+        "outputPath": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\RoomChatsClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\",
@@ -102,8 +102,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\Common.csproj": {
-                "projectPath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\Common\\Common.csproj"
+              "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\Common\\Common.csproj": {
+                "projectPath": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\Common\\Common.csproj"
               }
             }
           }

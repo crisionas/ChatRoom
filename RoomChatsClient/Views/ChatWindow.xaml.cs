@@ -165,7 +165,7 @@ namespace RoomChatsClient.Views
 
         private void Load()
         {
-
+            nicknameBox.Text = client.User.Login;
             chatroomsBindingList = new ThreadedBindingList<Chatroom>();
             client.ChatroomsBindingList = chatroomsBindingList;
             defaultChatroom = new Chatroom("Select a chatroom");

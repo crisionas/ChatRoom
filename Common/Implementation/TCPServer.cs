@@ -21,7 +21,8 @@ namespace Common.Implementation
         protected volatile TcpClient commSocket;
         protected volatile TcpListener tcpListener;
         protected volatile Boolean running;
-        protected int port;
+        protected string IP = "127.0.0.1";
+        protected int port = 4040;
         protected Thread checkDataThread;
         protected Thread checkQuitThread;
         protected Thread listenerThread;
@@ -47,7 +48,7 @@ namespace Common.Implementation
         {
             this.port = 4040;
             this.Running = false;
-            IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+            IPAddress ipAddress = IPAddress.Parse(IP);
 
             try
             {

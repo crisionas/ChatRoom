@@ -15,6 +15,7 @@
         <TextBox Name="messageTextBox" TextWrapping="Wrap" Margin="185,390,89,16" TextChanged="messageTextBox_TextChanged"/>
         <Button Name="createChatroomButton" Content="Create chatroom" Height="Auto" Width="Auto" Margin="665,20,20,390" Click="createChatroomButton_Click"/>
         <Button Name="sendButton" Content="Send" Height="Auto" Width="Auto" Margin="716,390,20,16" Click="sendButton_Click"/>
+        <TextBlock Name="nicknameBox" HorizontalAlignment="Left" Margin="20,0,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

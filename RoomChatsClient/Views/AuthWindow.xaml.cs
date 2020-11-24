@@ -53,6 +53,8 @@ namespace RoomChatsClient.Views
             if (reply.MessageList.First() == "success")
             {
                 client.User = new User(usernameTextBox.Text, passwordTextBox.Password);
+                DSAAlg.connectionKey = reply.MessageList[1];
+                MessageBox.Show($"\rSuccessfull authentication! \r\n Your connection key: \r\n {reply.MessageList[1]} ", "Connection successfull", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 var form = new ChatWindow(client);
                  form.Show();

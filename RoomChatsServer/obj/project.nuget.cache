@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cfno3b5FzSGondf26UMZ8qJ2L94T0eJ1V3BhWevQobBmP+ovQ2wMjJiyM070g9K+U/PXzZnV5bwuKGtTVt4/pA==",
+  "dgSpecHash": "7gRuJ2EYTF+8IukfRdFecGspu2XMV+anLtToncIn10ZTQU0CpJDMzoQ/ucYEGmEZpWWzIxbu2098AFiSzwfD1A==",
   "success": true,
-  "projectFilePath": "D:\\Visual Projects\\UTM\\SI\\RoomChatsClient\\RoomChatsServer\\RoomChatsServer.csproj",
+  "projectFilePath": "C:\\Users\\Artyrik\\Desktop\\SI\\ChatRoom\\RoomChatsServer\\RoomChatsServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Artyrik\\.nuget\\packages\\extended.wpf.toolkit\\4.0.1\\extended.wpf.toolkit.4.0.1.nupkg.sha512",
     "C:\\Users\\Artyrik\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
